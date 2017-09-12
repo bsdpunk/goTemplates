@@ -9,6 +9,7 @@ import (
 
 func main() {
 	jsonStr := []byte(`{  "id": 0,  "category": {    "id": 0,    "name": "string"  },  "name": "doggie",  "photoUrls": [    "string"  ],  "tags": [    {      "id": 0,      "name": "string"    }  ],  "status": "available"}`)
+
 	url := "http://petstore.swagger.io/v2/pet"
 	fmt.Println("URL:>", url)
 
