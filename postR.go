@@ -26,12 +26,7 @@ type Tags []struct {
 }
 
 func main() {
-	//	cat := Category{
-	//		ID:   0,
-	//		Name: "doggie"}
-	//	tagg := Tags{ID: 0, Name: "doggie"}
 	jsonStr := []byte(`{  "id": 0,  "category": {    "id": 0,    "name": "string"  },  "name": "doggie",  "photoUrls": [    "string"  ],  "tags": [    {      "id": 0,      "name": "string"    }  ],  "status": "available"}`)
-	//{  "id": 9190892114473683000,  "category": {    "id": 0,    "name": "string"  },  "name": "doggie",  "photoUrls": [    "string"  ],  "tags": [    {      "id": 0,      "name": "string"    }`)
 	//jsonStruct{
 	//	Category: Category{
 	//		ID:   0,
@@ -48,10 +43,7 @@ func main() {
 	url := "http://petstore.swagger.io/v2/pet"
 	fmt.Println("URL:>", url)
 
-	//var jsonStr = []byte(`{"title":"Buy cheese and bread for breakfast."}`)
-	//var jsonStr = new(jsonStruct)
 	req, err := http.NewRequest("POST", url, bytes.NewBuffer(jsonStr))
-	//req.Header.Set("X-Custom-Header", "myvalue")
 	req.Header.Set("Content-Type", "application/json")
 
 	client := &http.Client{}
